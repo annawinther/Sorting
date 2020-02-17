@@ -16,12 +16,24 @@ def selection_sort( arr ):
         arr[smallest_index] = temporary
 
     return arr
-print(selection_sort([5,2,1,9,0,4,6]))
+# print(selection_sort([5,2,1,9,0,4,6]))
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
+    for array in range(len(arr) - 1, 0, -1):
+        for i in range(array):
+            print(i)
+            if arr[i] > arr[i+1]:
+                temp = arr[i]
+                print('k', temp)
+                arr[i] = arr[i+1]
+                print('l', arr[i])
+                arr[i+1] = temp
+                print('t', arr[i+1])
 
     return arr
+
+print(bubble_sort([5,2,1,9,0,4,6]))
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
