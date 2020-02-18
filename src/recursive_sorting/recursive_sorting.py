@@ -1,60 +1,33 @@
 # TO-DO: complete the helper function below to merge 2 sorted arrays
 def merge( arrA, arrB ):
-    elements = len( arrA ) + len( arrB )
-    print('elements', elements)
-    merged_arr = [0] * elements
+    # elements = len( arrA ) + len( arrB )
+    # print('elements', elements)
+    # merged_arr = [0] * elements
+    merged_arr = []
     # TO-DO
     # A helper function that handles merging sorted pieces back together
-    # 1 --> declare two variables starting at 0
-    # 2 --> compare those valiarbles with the lenght of each array 
-        # if its bigger or equal to thw length of the array we compare it to, append it to the merged_arr.
-        # Then in the loop add one to the variable for each item in the loop
-        # DO the same for both sides, 
     a, b = 0, 0 
-    # while len(arrA) > a and len(arrB) < b:
-    #         if arrA[a] < 2:
-    #             print(arrA)
-    #             print(arrB)
-    #             merged_arr = arrA[a]
-    #             a =+ 1
-    #         else: 
-    #             merged_arr = arrB[b]
-    #             b =+ 1
-    for i in range(0, elements):
-            if a >= len(arrA):
-                merged_arr[i] = arrB[b]
-                b += 1
-            elif b >= len(arrB):
-                merged_arr[i] = arrA[a]
+    while a < len(arrA) and b < len(arrB):
+            if arrA[a] < arrB[b]:
+                merged_arr.append(arrA[a])
                 a += 1
-            elif arrA[a] < arrB[b]:
-                merged_arr[i] = arrA[a]
-                a += 1
-            else:
-                merged_arr[i] = arrB[b]
+            else: 
+                merged_arr.append(arrB[b])
                 b += 1
-
-    return merged_arr
-    # left_idx = 0
-    # right_idx = 0
-    # while len(arrA) > left_idx:
-    #     if arrA[left_idx] < 2:
-    #         print(arrA)
-    #         print(arrB)
-    #         merged_arr.append(arrA[left_idx])
-    #         left_idx =+ 1
-    #     else: 
-    #         merged_arr.append(arrB[right_idx])
-    #         right_idx =+ 1
+    merged_arr = merged_arr + arrA[a:] + arrB[b:]
     # for i in range(0, elements):
-    #     if i < i +1:
-    #         merged_arr[i]
-        # if i == 0:
-        #     return i
-        # elif i < i + 1:
-        #     merged_arr.append(i)
-    # merged_arr += arrA[left_idx:]
-    # merged_arr =+ arrB[right_idx:]
+    #         if a >= len(arrA):
+    #             merged_arr[i] = arrB[b]
+    #             b += 1
+    #         elif b >= len(arrB):
+    #             merged_arr[i] = arrA[a]
+    #             a += 1
+    #         elif arrA[a] < arrB[b]:
+    #             merged_arr[i] = arrA[a]
+    #             a += 1
+    #         else:
+    #             merged_arr[i] = arrB[b]
+    #             b += 1
 
     return merged_arr
 
