@@ -33,7 +33,8 @@ def merge( arrA, arrB ):
             else:
                 merged_arr[i] = arrB[b]
                 b += 1
-        
+
+    return merged_arr
     # left_idx = 0
     # right_idx = 0
     # while len(arrA) > left_idx:
@@ -57,13 +58,13 @@ def merge( arrA, arrB ):
 
     return merged_arr
 
-print(merge([1,2], [4, 5, 9]))
+# print(merge([1,2], [4, 5, 9]))
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
 # A recursive function that handles dividing the array (or subarray) in half
 def merge_sort( arr ):
     # TO-DO
-    if len( arr ) > 2:
+    if len( arr ) < 2:
         return arr
     
     middle = len(arr) // 2
@@ -73,8 +74,8 @@ def merge_sort( arr ):
     return merge(merge_sort(arr_a), merge_sort(arr_b))
 
 
-print(merge([1,4,6], [8,9,3,2]))
-
+print(merge_sort([1,4,6, 8,9,3,2]))
+# moving things to the right 
 
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
