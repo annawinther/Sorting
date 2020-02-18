@@ -10,9 +10,11 @@ def selection_sort( arr ):
             if arr[smallest_index] > arr[j]:
                 smallest_index = j
         # TO-DO: swap
-        temp = arr[i]
-        arr[i] = arr[smallest_index]
-        arr[smallest_index] = temp
+        # temp = arr[cur_index]
+        # arr[cur_index] = arr[smallest_index]
+        # arr[smallest_index] = temp
+
+        arr[smallest_index], arr[cur_index] = arr[cur_index], arr[smallest_index]
 
     return arr
 print(selection_sort([1, 5, 8, 4, 2, 9, 6, 0, 3, 7]))
