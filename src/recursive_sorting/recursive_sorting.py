@@ -63,10 +63,19 @@ print(merge([1,2], [4, 5, 9]))
 # A recursive function that handles dividing the array (or subarray) in half
 def merge_sort( arr ):
     # TO-DO
+    if len( arr ) > 2:
+        return arr
+    
+    middle = len(arr) // 2
+    arr_a = arr[:middle]
+    arr_b = arr[middle:]
 
-   return arr
+    return merge(merge_sort(arr_a), merge_sort(arr_b))
 
-   
+
+print(merge([1,4,6], [8,9,3,2]))
+
+
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
     # TO-DO
