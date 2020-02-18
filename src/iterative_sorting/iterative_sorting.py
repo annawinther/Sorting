@@ -26,11 +26,11 @@ def bubble_sort( arr ):
         for j in range(0, len(arr) - i - 1):
             # if the element is found greater than the next element, swap them
             if arr[j] > arr[j+1]:
-                temp = arr[j]
-                arr[j] = arr[j+1]
-                arr[j+1] = temp
+                # temp = arr[j]
+                # arr[j] = arr[j+1]
+                # arr[j+1] = temp
                 # without temp variabale:
-                # arr[j], arr[j+1] = arr[j+1], arr[j]
+                arr[j], arr[j+1] = arr[j+1], arr[j]
     
     # for array in range(len(arr) - 1, 0, -1):
     #     for i in range(array):
