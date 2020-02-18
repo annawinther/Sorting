@@ -17,7 +17,7 @@ def selection_sort( arr ):
     return arr
 print(selection_sort([1, 5, 8, 4, 2, 9, 6, 0, 3, 7]))
 
-# TO-DO:  implement the Bubble Sort function below
+# TO-DO: implement the Bubble Sort function below
 def bubble_sort( arr ):
     for i in range(len(arr)):
         # last i are already in place 
